@@ -34,8 +34,6 @@ App Android súper simple para **cobrar** y **pagar** con SINPE Móvil usando **
 ---
 
 ## 📸 Capturas (en orden)
-> Guarda tus imágenes en `docs/screens/` con estos nombres.  
-> Si usas otros nombres, ajusta las rutas.
 
 | Pantalla | Captura |
 |---|---|
