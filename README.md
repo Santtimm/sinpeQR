@@ -49,10 +49,9 @@ App Android súper simple para **cobrar** y **pagar** con SINPE Móvil usando **
 | 08. QR generado | ![QR](docs/screens/08_qr.jpg) |
 | 09. Scanner | ![Scanner](docs/screens/09_scanner.jpg) |
 | 10. Confirmar pago | ![Confirmar](docs/screens/10_confirm.jpg) |
-| 11. **Éxito (opcional)** | *(añadir)* `docs/screens/11_success.jpg` |
-| 12. **Compartir QR (opcional)** | *(añadir)* `docs/screens/12_share.jpg` |
+| 11. Éxito | ![Exito](docs/screens/11_success.jpg) |
+| 12. Compartir QR |  [Compartir](docs/screens/12_share.jpg) |
 
-> Ya subiste 10 capturas; cuando tengas **11** y **12**, solo colócalas y listo.
 
 ---
 
