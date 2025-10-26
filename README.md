@@ -1,41 +1,121 @@
-# SinpeQR
+# SinpeQR — Cobros y pagos por QR vía SINPE Móvil (SMS)
 
-App Android para cobrar/pagar vía SINPE Móvil con QR y envío por SMS.
+App Android súper simple para **cobrar** y **pagar** con SINPE Móvil usando **QR + SMS**, pensada para personas mayores y comercios de bajo volumen.  
+- Botones grandes y contraste alto.  
+- Flujo de **Cobrar**: monto → QR → compartir / nuevo / inicio.  
+- Flujo de **Pagar**: escanear → confirmar → **enviar SINPE** (SMS) → éxito.  
+- Seguridad: PIN local, bloqueo de doble toque/escaneo, datos cifrados en el dispositivo, historial local.
 
-## Características
-- Generar QR con formato `pase <monto> <telefono> [descripcion]`.
-- Escaneo con ZXing (JourneyApps).
-- Envío SMS directo (shortcode configurable, por defecto 2627 / BNCR y 7070-7474 / Davivienda).
-- Historial local (Room).
-- PIN de protección (EncryptedSharedPreferences).
-- Botón “Compartir QR”.
+> **Privacidad:** nada sale del teléfono salvo el SMS del banco.
 
-## Requisitos
-- Android Studio (Giraffe/Koala o más reciente).
-- JDK 17 (o el que pida tu AGP).
-- `compileSdk=34`, `minSdk=24`.
+---
 
-## Cómo compilar
-1. Clona o descomprime el proyecto.
-2. Abre en Android Studio.
-3. **Build > Make Project** o `./gradlew assembleDebug`.
-4. APK: `app/build/outputs/apk/debug/app-debug.apk`.
+## ✨ Funcionalidades
+- **Generación de QR** con formato `pase <monto> <tel> <desc>` (desc opcional, sin espacios).
+- **Escaneo de QR** (ZXing) con **antidoble-disparo** (AtomicBoolean).
+- **Envío de SINPE por SMS** directo (BNCR 2627 por defecto; Davivienda 7070-7474 disponible).
+- **Historial local** (Room) con monto, destino, fecha/hora, estado y descripción.
+- **PIN de acceso** (EncryptedSharedPreferences + hash) con flujo de “Olvidé mi PIN” que **resetea** datos locales.
+- **UI accesible**: tipografías grandes, botones 64dp+, colores de alto contraste, modo claro forzado.
 
-## Permisos
-- `CAMERA` para el escáner.
-- `SEND_SMS` para enviar SINPE por SMS.
+---
 
-## Pruebas rápidas
-- Configura teléfono receptor en **Menú (⋮) > Configuración**.
-- “Cobrar”: ingresa monto y (opcional) descripción → genera QR.
-- “Pagar”: escanea ese QR → confirma → “ENVIAR SINPE”.
-- Verifica en **Historial**.
+## 🧭 Flujo de uso
+**Cobrar**
+1. Inicio → **Cobrar**  
+2. Digita monto (enter abre teclado numérico, sin decimales) y descripción (máx 10, sin espacios).  
+3. **Generar QR** → mostrar QR → **Compartir / Nuevo / Volver al inicio**.
 
-## Librerías
-- ZXing Android Embedded (JourneyApps)
-- Room (AndroidX)
-- Material Components
-- Security Crypto (EncryptedSharedPreferences)
+**Pagar**
+1. Inicio → **Pagar** → abre cámara (por defecto).  
+2. Lee QR → **Confirmar pago** (monto, destino, descripción).  
+3. **Enviar SINPE** (SMS) → pantalla de **éxito** → volver al inicio.
 
-## Nota
-No se incluye ningún keystore de firma ni credenciales sensibles.
+---
+
+## 📸 Capturas (en orden)
+> Guarda tus imágenes en `docs/screens/` con estos nombres.  
+> Si usas otros nombres, ajusta las rutas.
+
+| Pantalla | Captura |
+|---|---|
+| 01. Inicio | ![Inicio](docs/screens/01_home.jpg) |
+| 02. Menú (⋮) | ![Menú](docs/screens/02_overflow.jpg) |
+| 03. PIN | ![PIN](docs/screens/03_pin.jpg) |
+| 04. Olvidé mi PIN | ![Olvidé PIN](docs/screens/04_forgot_pin.jpg) |
+| 05. Configuración | ![Configuración](docs/screens/05_config.jpg) |
+| 06. Historial | ![Historial](docs/screens/06_history.jpg) |
+| 07. Cobrar (monto) | ![Cobrar Monto](docs/screens/07_cobrar_input.jpg) |
+| 08. QR generado | ![QR](docs/screens/08_qr.jpg) |
+| 09. Scanner | ![Scanner](docs/screens/09_scanner.jpg) |
+| 10. Confirmar pago | ![Confirmar](docs/screens/10_confirm.jpg) |
+| 11. **Éxito (opcional)** | *(añadir)* `docs/screens/11_success.jpg` |
+| 12. **Compartir QR (opcional)** | *(añadir)* `docs/screens/12_share.jpg` |
+
+> Ya subiste 10 capturas; cuando tengas **11** y **12**, solo colócalas y listo.
+
+---
+
+## 🏗️ Stack técnico
+- **Kotlin + AndroidX + Material3**
+- **ZXing (JourneyApps)** para QR
+- **Room** para historial
+- **EncryptedSharedPreferences** (+ MasterKey) para PIN y config
+- **ViewBinding / findViewById** simple
+- **Permisos**: Cámara y, opcional, SMS
+
+---
+
+## ⚙️ Compilar y ejecutar
+1. Android Studio Giraffe / Jellyfish+ (API 34 recomendado).  
+2. Abre el proyecto y sincroniza Gradle.  
+3. Ejecuta en un dispositivo Android 7.0+ (API 24+).  
+4. En el primer uso, ve a **⋮ → Configuración** y guarda:  
+   - **Teléfono** del que cobra  
+   - **Banco del pagador** (BNCR 2627 o Davivienda 7070-7474)  
+5. Otorga permisos cuando los pida (Cámara y **Enviar SMS** si vas a pagar).
+
+---
+
+## 🔐 Seguridad
+- **PIN** requerido para entrar a Configuración.  
+- **Olvidé mi PIN** → borra PIN, configuración e historial local (recuperable reconfigurando).  
+- **Antidoble-clic** en *Enviar SINPE* y **antidoble-escaneo**.  
+- **Sin backend**: minimiza superficie de ataque.  
+- **Cifrado de preferencias**: MasterKey AES256 + EncryptedSharedPreferences.
+
+---
+
+## 🏦 Bancos soportados (SMS corto)
+- **BNCR** — `2627` (por defecto)  
+- **Davivienda** — `7070-7474`  
+> Para agregar bancos: lista en `ConfigurationActivity` (Spinner) y mapeo en `SecurePrefs`/envío SMS.
+
+---
+
+## 🚧 Limitaciones actuales
+- Pago por **SMS** (no API bancaria).  
+- No valida respuesta del banco (se registra como **SENT** o **FAILED** por envío).  
+- Descripción sin espacios (máx. 10 chars) por compatibilidad de formato.
+
+---
+
+## 🗺️ Roadmap
+- Confirmación de entrega (lectura de SMS del banco, si el usuario lo permite).  
+- Múltiples bancos con autodetección.  
+- Exportar historial (CSV/WhatsApp/Correo).  
+- Modo **cajero** (PIN sólo para configuración).  
+- Versión iOS (lector QR + deeplink a app de SMS).
+
+---
+
+## 📦 Entrega para hackathon
+- **APK de demo** (`/release/SinpeQR-demo.apk`)  
+- **Video 60 s** mostrando flujos Cobrar y Pagar  
+- **Pitch Deck** (`/docs/pitch_deck.md`)  
+- **Guion 60 s** (`/docs/pitch_60s.md`)
+
+---
+
+## 📝 Licencia
+MIT — úsalo, modifícalo y contribuye.
