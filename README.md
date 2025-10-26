@@ -37,7 +37,7 @@ App Android súper simple para **cobrar** y **pagar** con SINPE Móvil usando **
 
 | Pantalla | Captura |
 |---|---|
-| 01. Inicio | ![Inicio](/01_home.jpg) alt= "hola" width="200"/ |
+| 01. Inicio | ![Inicio](/01_home.jpg)alt= "Inicio" width="50%" |
 | 02. Menú (⋮) | ![Menú](docs/screens/02_overflow.jpg) |
 | 03. PIN | ![PIN](docs/screens/03_pin.jpg) |
 | 04. Olvidé mi PIN | ![Olvidé PIN](docs/screens/04_forgot_pin.jpg) |
