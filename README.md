@@ -1,4 +1,4 @@
-# SinpeQR — Cobros y pagos por QR vía SINPE Móvil (SMS)
+# SinpeQR — Cobros y pagos por QR vía SINPE Móvil (SMS) :)
 
 App Android súper simple para **cobrar** y **pagar** con SINPE Móvil usando **QR + SMS**, pensada para personas mayores y comercios de bajo volumen.  
 - Botones grandes y contraste alto.  
