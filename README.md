@@ -38,17 +38,17 @@ App Android súper simple para **cobrar** y **pagar** con SINPE Móvil usando **
 | Pantalla | Captura |
 |---|---|
 | 01. Inicio | ![Inicio](/01_home.jpg) |
-| 02. Menú (⋮) | ![Menú](docs/screens/02_overflow.jpg) |
-| 03. PIN | ![PIN](docs/screens/03_pin.jpg) |
-| 04. Olvidé mi PIN | ![Olvidé PIN](docs/screens/04_forgot_pin.jpg) |
-| 05. Configuración | ![Configuración](docs/screens/05_config.jpg) |
-| 06. Historial | ![Historial](docs/screens/06_history.jpg) |
-| 07. Cobrar (monto) | ![Cobrar Monto](docs/screens/07_cobrar_input.jpg) |
-| 08. QR generado | ![QR](docs/screens/08_qr.jpg) |
-| 09. Scanner | ![Scanner](docs/screens/09_scanner.jpg) |
-| 10. Confirmar pago | ![Confirmar](docs/screens/10_confirm.jpg) |
-| 11. Éxito | ![Exito](docs/screens/11_success.jpg) |
-| 12. Compartir QR |  [Compartir](docs/screens/12_share.jpg) |
+| 02. Menú (⋮) | ![Menú](/02_overflow.jpg) |
+| 03. PIN | ![PIN](/03_pin.jpg) |
+| 04. Olvidé mi PIN | ![Olvidé PIN](04_forgot_pin.jpg) |
+| 05. Configuración | ![Configuración](/05_config.jpg) |
+| 06. Historial | ![Historial](/06_history.jpg) |
+| 07. Cobrar (monto) | ![Cobrar Monto](/07_cobrar_input.jpg) |
+| 08. QR generado | ![QR](/08_qr.jpg) |
+| 09. Scanner | ![Scanner](/09_scanner.jpg) |
+| 10. Confirmar pago | ![Confirmar](/10_confirm.jpg) |
+| 11. Éxito | ![Exito](/11_success.jpg) |
+| 12. Compartir QR |  [Compartir](/12_share.jpg) |
 
 
 ---
