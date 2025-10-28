@@ -44,11 +44,11 @@ App Android súper simple para **cobrar** y **pagar** con SINPE Móvil usando **
 | 05. Configuración | ![Configuración](/05_config.jpg) |
 | 06. Historial | ![Historial](/06_history.jpg) |
 | 07. Cobrar (monto) | ![Cobrar Monto](/07_cobrar_input.jpg) |
-| 08. QR generado | ![QR](/08_qr.jpg) |
+| 08. Importar de galeria | ![QR](/08_qr.jpg) |
 | 09. Scanner | ![Scanner](/09_scanner.jpg) |
 | 10. Confirmar pago | ![Confirmar](/10_confirm.jpg) |
 | 11. Éxito | ![Exito](/11_success.jpg) |
-| 12. Compartir QR |  [Compartir](/12_share.jpg) |
+| 12. QR |  [Compartir](/12_share.jpg) |
 
 
 ---
