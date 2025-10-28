@@ -38,17 +38,17 @@ App Android súper simple para **cobrar** y **pagar** con SINPE Móvil usando **
 | Pantalla | Captura |
 |---|---|
 | 01. Inicio | ![Inicio](/01_home.jpg) |
-| 02. Menú (⋮) | ![Menú](/02_overflow.jpg) |
-| 03. PIN | ![PIN](/03_pin.jpg) |
-| 04. Olvidé mi PIN | ![Olvidé PIN](04_forgot_pin.jpg) |
-| 05. Configuración | ![Configuración](/05_config.jpg) |
+| 02. Menú (⋮) | ![Menú](/02_overflow.jpeg) |
+| 03. PIN | ![PIN](/03_pin.jpeg) |
+| 04. Olvidé mi PIN | ![Olvidé PIN](04_forgot_pin.jpeg) |
+| 05. Configuración | ![Configuración](/05_config.jpeg) |
 | 06. Historial | ![Historial](/06_history.jpg) |
-| 07. Cobrar (monto) | ![Cobrar Monto](/07_cobrar_input.jpg) |
-| 08. QR generado | ![QR](/08_qr.jpg) |
-| 09. Scanner | ![Scanner](/09_scanner.jpg) |
-| 10. Confirmar pago | ![Confirmar](/10_confirm.jpg) |
-| 11. Éxito | ![Exito](/11_success.jpg) |
-| 12. Compartir QR |  [Compartir](/12_share.jpg) |
+| 07. Cobrar (monto) | ![Cobrar Monto](/07_cobrar_input.jpeg) |
+| 08. QR generado | ![QR](/08_qr.jpeg) |
+| 09. Scanner | ![Scanner](/09_scanner.jpeg) |
+| 10. Confirmar pago | ![Confirmar](/10_confirm.jpeg) |
+| 11. Éxito | ![Exito](/11_success.jpeg) |
+| 12. Compartir QR |  [Compartir](/12_share.jpeg) |
 
 
 ---
