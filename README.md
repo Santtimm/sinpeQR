@@ -86,7 +86,6 @@ App Android súper simple para **cobrar** y **pagar** con SINPE Móvil usando **
 ## 🏦 Bancos soportados (SMS corto)
 - **BNCR** — `2627` (por defecto)  
 - **Davivienda** — `7070-7474`  
-> Para agregar bancos: lista en `ConfigurationActivity` (Spinner) y mapeo en `SecurePrefs`/envío SMS.
 
 ---
 
